@@ -9,6 +9,7 @@
   </parent>
 
   <artifactId>nuxeo-webengine-wro</artifactId>
+  <version>5.6.0</version>
   <name>Nuxeo WebEngine :: Web Resource Optimizer</name>
   <description>
     This bundle enables the use of the wro4j library in webengine
