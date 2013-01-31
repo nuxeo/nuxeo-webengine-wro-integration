@@ -1,0 +1,2 @@
+tomcat.dir=~/src/lm-labs/distribution/labs
+webengine.dir={tomcat.dir}/nxserver

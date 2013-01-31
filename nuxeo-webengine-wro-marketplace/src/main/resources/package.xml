@@ -1,0 +1,39 @@
+<package type="addon" name="nuxeo-webengine-wro" version="@VERSION@">
+  <title>Nuxeo WebEgine Web Resource Optimizer</title>
+  <description>
+    <h1>Descpription</h1>
+
+    <p>
+      This package is a technical integration of the
+      <a href="http://code.google.com/p/wro4j/">wro4j</a>
+      library into Nuxeo. It allows one webengine application to declare
+      its own wro.xml file. The resources will be concatenated into the wro
+      servlet located at http://${nuxeo.host}/nuxeo/wro/mygroup.css
+    </p>
+
+    <h1>Specificity</h1>
+
+    <p>By default, wro4j doesn&#8217;t know how to treat @import in .less
+      files. This prevents from using for instance bootstrap.less file
+      which can be painfull. The package declare a new Less processor that
+      is able to treat those @imports for one level of import. It&#8217;s
+      now able to compile bootstrap.less.</p>
+
+
+  </description>
+  <home-page>http://doc.nuxeo.com/x/bIEk</home-page>
+  <vendor>Leroy Merlin</vendor>
+  <installer restart="true" />
+  <uninstaller restart="true" />
+  <!-- <hotreload-support>false</hotreload-support> -->
+  <!-- <require-terms-and-conditions-acceptance>false -->
+  <!-- </require-terms-and-conditions-acceptance> -->
+  <nuxeo-validation>nuxeo_certified</nuxeo-validation>
+  <production-state>production_ready</production-state>
+  <supported>false</supported>
+  <platforms>
+    <platform>cap-5.6.0-HF03-SNAPSHOT</platform>
+  </platforms>
+  <license>LGPL</license>
+  <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
+</package>

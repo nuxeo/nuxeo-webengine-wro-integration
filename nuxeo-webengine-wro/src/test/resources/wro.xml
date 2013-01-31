@@ -1,0 +1,26 @@
+<groups xmlns="http://www.isdc.ro/wro">
+
+  <group name="simple">
+    <css>webengine:wrotest/css/site.css</css>
+  </group>
+
+  <group name="compound">
+    <css>webengine:wrotest/css/site.css</css>
+    <css>webengine:wrotest/css/site2.css</css>
+  </group>
+
+  <group name="simpleless">
+    <css>webengine:wrotest/less/test2.less</css>
+  </group>
+
+  <group name="compoundless">
+    <css>webengine:wrotest/less/test.less</css>
+  </group>
+
+  <group name="bootstrap">
+    <css>webengine:wrotest/bootstrap/bootstrap.less</css>
+  </group>
+
+
+
+</groups>

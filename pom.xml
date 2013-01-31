@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.nuxeo.ecm.webengine</groupId>
+    <artifactId>nuxeo-webengine-parent</artifactId>
+    <version>5.6.0-HF05</version>
+  </parent>
+
+  <properties>
+    <nuxeo.version>5.6.0-HF05</nuxeo.version>
+  </properties>
+
+  <artifactId>nuxeo-webengine-wro-parent</artifactId>
+  <name>Nuxeo WebEngine :: Web Resource Optimizer parent</name>
+  <packaging>pom</packaging>
+  <modules>
+    <module>nuxeo-webengine-wro</module>
+  </modules>
+
+  <profiles>
+    <profile>
+      <id>distrib</id>
+      <modules>
+        <module>nuxeo-webengine-wro-marketplace</module>
+      </modules>
+    </profile>
+  </profiles>
+
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>lm-snapshots</id>
+      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/repositories/snapshots/
+      </url>
+    </snapshotRepository>
+
+    <repository>
+      <id>lm-releases</id>
+      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/repositories/releases/
+      </url>
+    </repository>
+  </distributionManagement>
+
+
+  <dependencyManagement>
+    <dependencies>
+
+      <dependency>
+	<groupId>ro.isdc.wro4j</groupId>
+	<artifactId>wro4j-core</artifactId>
+	<version>1.4.7</version>
+      </dependency>
+
+      <dependency>
+	<groupId>ro.isdc.wro4j</groupId>
+	<artifactId>wro4j-extensions</artifactId>
+	<version>1.4.7</version>
+      </dependency>
+      
+      <dependency>
+	<groupId>org.nuxeo.ecm.webengine</groupId>
+	<artifactId>nuxeo-webengine-wro</artifactId>
+	<version>${nuxeo.version}</version>
+      </dependency>
+
+      <dependency>
+	<groupId>org.nuxeo.ecm.webengine</groupId>
+	<artifactId>nuxeo-webengine-wro-marketplace</artifactId>
+	<version>${nuxeo.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <repositories>
+    <repository>
+      <id>lm-public</id>
+      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/groups/public</url>
+      <releases>
+	<enabled>true</enabled>
+      </releases>
+      <snapshots>
+	<enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>lm-snapshots</id>
+      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/groups/public-snapshots</url>
+      <releases>
+	<enabled>false</enabled>
+      </releases>
+      <snapshots>
+	<updatePolicy>daily</updatePolicy>
+	<enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+</project>

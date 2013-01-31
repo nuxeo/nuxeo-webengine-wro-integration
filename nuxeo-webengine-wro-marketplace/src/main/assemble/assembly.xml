@@ -1,0 +1,38 @@
+<project name="nuxeo-assembly" default="build" xmlns:nx="urn:nuxeo-build" xmlns:artifact="urn:nuxeo-artifact">
+  <taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
+  <taskdef resource="org/nuxeo/build/artifact/antlib.xml" uri="urn:nuxeo-artifact" />
+
+  <target name="build" description="Build Nuxeo DM Marketplace package">
+    <tstamp />
+    <delete failonerror="false" dir="${maven.project.build.directory}/marketplace" />
+    <mkdir dir="${maven.project.build.directory}/marketplace" />
+    <mkdir dir="${maven.project.build.directory}/marketplace/bundles" />
+    <mkdir dir="${maven.project.build.directory}/marketplace/lib" />
+
+    <copy todir="${maven.project.build.directory}/marketplace">
+      <fileset dir="src/main/resources" />
+      <filterset>
+        <filter token="VERSION" value="${maven.project.version}" />
+      </filterset>
+    </copy>
+
+    <copy todir="${maven.project.build.directory}/marketplace/bundles">
+      <artifact:resolveFile key="org.nuxeo.ecm.webengine:nuxeo-webengine-wro:${maven.project.version}:jar" />
+    </copy>
+
+    <copy todir="${maven.project.build.directory}/marketplace/lib">
+      <artifact:resolveFile key="ro.isdc.wro4j:wro4j-core:1.4.7:jar" />
+      <artifact:resolveFile key="ro.isdc.wro4j:wro4j-extensions:1.4.7:jar" />
+      <artifact:resolveFile key="org.apache.commons:commons-lang3:3.1:jar"/>
+      <artifact:resolveFile key="org.mozilla:rhino:1.7R3:jar"/>
+      <artifact:resolveFile key="commons-io:commons-io:2.1:jar"/>
+    </copy>
+
+
+
+
+    <zip destfile="${maven.project.build.directory}/${maven.project.artifactId}-${maven.project.version}.zip" basedir="${maven.project.build.directory}/marketplace" />
+    <artifact:attach file="${maven.project.build.directory}/${maven.project.artifactId}-${maven.project.version}.zip" target="${maven.project.groupId}:${maven.project.artifactId}" type="zip" />
+  </target>
+
+</project>
