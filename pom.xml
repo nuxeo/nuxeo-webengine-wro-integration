@@ -9,7 +9,7 @@
   </parent>
 
   <properties>
-    <nuxeo.version>5.6.0-HF05</nuxeo.version>
+    <wro.version>5.7-SNAPSHOT</wro.version>
   </properties>
 
   <artifactId>nuxeo-webengine-wro-parent</artifactId>
@@ -63,13 +63,13 @@
       <dependency>
 	<groupId>org.nuxeo.ecm.webengine</groupId>
 	<artifactId>nuxeo-webengine-wro</artifactId>
-	<version>${nuxeo.version}</version>
+	<version>${wro.version}</version>
       </dependency>
 
       <dependency>
 	<groupId>org.nuxeo.ecm.webengine</groupId>
 	<artifactId>nuxeo-webengine-wro-marketplace</artifactId>
-	<version>${nuxeo.version}</version>
+	<version>${wro.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
