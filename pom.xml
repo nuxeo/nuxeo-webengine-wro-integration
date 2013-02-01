@@ -33,14 +33,12 @@
   <distributionManagement>
     <snapshotRepository>
       <id>lm-snapshots</id>
-      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/repositories/snapshots/
-      </url>
+      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/repositories/snapshots</url>
     </snapshotRepository>
 
     <repository>
       <id>lm-releases</id>
-      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/repositories/releases/
-      </url>
+      <url>http://forge.fr.corp.leroymerlin.com/nexus/content/repositories/releases</url>
     </repository>
   </distributionManagement>
 
