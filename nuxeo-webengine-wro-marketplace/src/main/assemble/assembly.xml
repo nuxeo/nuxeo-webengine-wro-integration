@@ -20,12 +20,25 @@
       <artifact:resolveFile key="org.nuxeo.ecm.webengine:nuxeo-webengine-wro:${maven.project.version}:jar" />
     </copy>
 
+    <!--copy todir="${maven.project.build.directory}/marketplace/lib" overwrite="true">    
+      <artifact:dependencies>
+        <includes>
+          <artifact groupId="ro.isdc.wro4j" />
+          <artifact groupId="commons-io" artifactId="commons-io" version="2.1"/>
+          <artifact groupId="commons-pool" />
+          <artifact groupId="org.apache.commons" artifactId="commons-lang3" />
+          <artifact groupId="org.mozilla" artifactId="rhino"/>
+        </includes>
+      </artifact:dependencies>
+    </copy-->
+
     <copy todir="${maven.project.build.directory}/marketplace/lib">
       <artifact:resolveFile key="ro.isdc.wro4j:wro4j-core:1.4.7:jar" />
       <artifact:resolveFile key="ro.isdc.wro4j:wro4j-extensions:1.4.7:jar" />
       <artifact:resolveFile key="org.apache.commons:commons-lang3:3.1:jar"/>
       <artifact:resolveFile key="org.mozilla:rhino:1.7R3:jar"/>
       <artifact:resolveFile key="commons-io:commons-io:2.1:jar"/>
+      <artifact:resolveFile key="commons-pool:commons-pool:1.6:jar"/>
     </copy>
 
 

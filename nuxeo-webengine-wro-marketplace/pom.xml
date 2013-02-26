@@ -27,4 +27,11 @@
       </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.nuxeo.ecm.webengine</groupId>
+      <artifactId>nuxeo-webengine-wro</artifactId>
+    </dependency>
+  </dependencies>
 </project>

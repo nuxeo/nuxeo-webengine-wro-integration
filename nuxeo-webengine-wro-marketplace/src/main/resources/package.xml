@@ -32,7 +32,7 @@
   <production-state>production_ready</production-state>
   <supported>false</supported>
   <platforms>
-    <platform>cap-5.6.0-HF03-SNAPSHOT</platform>
+    <platform>cap-5.6.0</platform>
   </platforms>
   <license>LGPL</license>
   <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>

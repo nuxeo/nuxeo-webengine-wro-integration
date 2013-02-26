@@ -9,7 +9,7 @@
   </parent>
 
   <properties>
-    <wro.version>5.7-SNAPSHOT</wro.version>
+    <wro.version>1.4.7</wro.version>
   </properties>
 
   <artifactId>nuxeo-webengine-wro-parent</artifactId>
@@ -18,16 +18,8 @@
   <packaging>pom</packaging>
   <modules>
     <module>nuxeo-webengine-wro</module>
+    <module>nuxeo-webengine-wro-marketplace</module>
   </modules>
-
-  <profiles>
-    <profile>
-      <id>distrib</id>
-      <modules>
-        <module>nuxeo-webengine-wro-marketplace</module>
-      </modules>
-    </profile>
-  </profiles>
 
 
   <distributionManagement>
@@ -49,25 +41,25 @@
       <dependency>
 	<groupId>ro.isdc.wro4j</groupId>
 	<artifactId>wro4j-core</artifactId>
-	<version>1.4.7</version>
+	<version>${wro.version}</version>
       </dependency>
 
       <dependency>
 	<groupId>ro.isdc.wro4j</groupId>
 	<artifactId>wro4j-extensions</artifactId>
-	<version>1.4.7</version>
+	<version>${wro.version}</version>
       </dependency>
       
       <dependency>
 	<groupId>org.nuxeo.ecm.webengine</groupId>
 	<artifactId>nuxeo-webengine-wro</artifactId>
-	<version>${wro.version}</version>
+	<version>${project.version}</version>
       </dependency>
 
       <dependency>
 	<groupId>org.nuxeo.ecm.webengine</groupId>
 	<artifactId>nuxeo-webengine-wro-marketplace</artifactId>
-	<version>${wro.version}</version>
+	<version>${project.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
